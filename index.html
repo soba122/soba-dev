@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soba Developer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- تسجيل الدخول -->
+        <div id="loginForm" class="form-container">
+            <form class="form">
+                <h2>تسجيل الدخول</h2>
+                <input type="text" id="loginUsername" placeholder="اسم المستخدم" required>
+                <input type="password" id="loginPassword" placeholder="كلمة المرور" required>
+                <button type="submit">تسجيل الدخول</button>
+                <p id="loginError" class="error-message"></p>
+                <p>لا تملك حسابًا؟ <a href="#" id="showRegister">سجل هنا</a></p>
+            </form>
+        </div>
+
+        <!-- تسجيل مستخدم جديد -->
+        <div id="registerForm" class="form-container hidden">
+            <form class="form">
+                <h2>تسجيل حساب جديد</h2>
+                <input type="text" id="registerUsername" placeholder="اسم المستخدم" required>
+                <input type="password" id="registerPassword" placeholder="كلمة المرور" required>
+                <button type="submit">تسجيل</button>
+                <p id="registerError" class="error-message"></p>
+                <p>لديك حساب؟ <a href="#" id="showLogin">سجل الدخول هنا</a></p>
+            </form>
+        </div>
+
+        <!-- الصفحة الترحيبية -->
+        <div id="welcomePage" class="welcome-container hidden">
+            <h2>Welcome Developer Soba!</h2>
+            <p>You have successfully logged in.</p>
+
+            <!-- قسم Discord و Minecraft Server -->
+            <div class="server-info">
+                <h3>My Discord Server</h3>
+                <p>Join my Discord server for updates and support:</p>
+                <a href="https://discord.gg/GqsHz2PVe7" target="_blank" class="discord-link">Join Discord</a>
+
+                <h3>Coming Soon</h3>
+                <p>I am a developer of a Minecraft server. Here are the details:</p>
+                <ul>
+                    <li><strong>Server IP:</strong> Coming Soon</li>
+                    <li><strong>Version:</strong> 1.20.1</li>
+                    <li><strong>Features:</strong> Quickbox, Boxpvp, Plugins</li>
+                </ul>
+            </div>
+
+            <!-- خيارات إضافية -->
+            <div class="options">
+                <button onclick="showProfile()">View Profile</button>
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
