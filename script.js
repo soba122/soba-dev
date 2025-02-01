@@ -1,5 +1,5 @@
-// بيانات المستخدمين (وهمية)
-let users = [
+// بيانات المستخدمين (محفوظة في LocalStorage)
+let users = JSON.parse(localStorage.getItem('users')) || [
     { username: "user1", password: "pass1" },
     { username: "user2", password: "pass2" }
 ];
@@ -43,6 +43,7 @@ document.getElementById('registerForm').querySelector('form').addEventListener('
         alert('Username already exists!');
     } else {
         users.push({ username: newUsername, password: newPassword });
+        localStorage.setItem('users', JSON.stringify(users)); // حفظ البيانات في LocalStorage
         alert('Registration successful! Please login.');
         document.getElementById('registerForm').classList.add('hidden');
         document.getElementById('loginForm').classList.remove('hidden');
