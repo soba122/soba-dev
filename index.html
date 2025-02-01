@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soba</title>
+    <title>Domain Marketplace</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -49,18 +49,38 @@
             <h2>Welcome, Admin!</h2>
             <p>You have successfully logged in.</p>
 
-            <!-- ربط Discord -->
-            <div class="discord-link">
-                <p>Connect your Discord account:</p>
-                <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=identify" target="_blank">Connect Discord</a>
+            <!-- إدارة الطلبات -->
+            <div class="orders-management">
+                <h3>Orders Management</h3>
+                <ul id="ordersList"></ul>
             </div>
 
-            <!-- إدارة الدومين -->
-            <div class="domain-management">
-                <h3>Domain Management</h3>
-                <input type="text" id="domainInput" placeholder="Enter domain name">
+            <!-- إضافة دومين -->
+            <div class="add-domain">
+                <h3>Add Domain</h3>
+                <input type="text" id="domainName" placeholder="Enter domain name">
+                <input type="number" id="domainPrice" placeholder="Enter domain price">
                 <button onclick="addDomain()">Add Domain</button>
-                <ul id="domainList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- صفحة المستخدم -->
+    <div class="user-container hidden" id="userPage">
+        <div class="user-box">
+            <h2>Welcome, User!</h2>
+            <p>Browse available domains:</p>
+
+            <!-- قائمة الدومينات -->
+            <div class="domains-list">
+                <ul id="domainsList"></ul>
+            </div>
+
+            <!-- شراء دومين -->
+            <div class="buy-domain">
+                <h3>Buy Domain</h3>
+                <input type="text" id="buyDomainName" placeholder="Enter domain name to buy">
+                <button onclick="buyDomain()">Buy</button>
             </div>
         </div>
     </div>
