@@ -6,8 +6,8 @@ let users = JSON.parse(localStorage.getItem('users')) || [
 
 // بيانات الدومينات (محفوظة في LocalStorage)
 let domains = JSON.parse(localStorage.getItem('domains')) || [
-    { name: "example1.ddns.net", 5M Credit },
-    { name: "example2.ddns.me", 3M Credit }
+    { name: "example1.com", price: 100 },
+    { name: "example2.com", price: 200 }
 ];
 
 // بيانات الطلبات (محفوظة في LocalStorage)
