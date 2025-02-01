@@ -1,76 +1,166 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="rtl" lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soba</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            border: 5px solid white;
+        }
+
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-tag {
+            background: #E8F5E9;
+            color: #2E7D32;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .project {
+            border-bottom: 1px solid #eee;
+            padding: 15px 0;
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+            
+            .header {
+                padding: 40px 10px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="auth-container">
-        <!-- تسجيل الدخول -->
-        <div id="loginForm" class="form-container">
-            <form class="auth-form">
-                <h2>Login</h2>
-                <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Enter your username" required>
-                </div>
-                <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
-                </div>
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember me</label>
-                </div>
-                <button type="submit">Login</button>
-                <p class="switch-form">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
-            </form>
-        </div>
+    <div class="container">
+        <header class="header">
+            <img src="/api/placeholder/150/150" alt="الصورة الشخصية" class="profile-img">
+            <h1>مطور سيرفرات ماينكرافت</h1>
+            <p>متخصص في تطوير وإدارة سيرفرات ماينكرافت</p>
+        </header>
 
-        <!-- تسجيل مستخدم جديد -->
-        <div id="registerForm" class="form-container hidden">
-            <form class="auth-form">
-                <h2>Register</h2>
-                <div class="input-group">
-                    <label for="newUsername">Username</label>
-                    <input type="text" id="newUsername" placeholder="Choose a username" required>
-                </div>
-                <div class="input-group">
-                    <label for="newPassword">Password</label>
-                    <input type="password" id="newPassword" placeholder="Choose a password" required>
-                </div>
-                <button type="submit">Register</button>
-                <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login here</a></p>
-            </form>
-        </div>
-    </div>
+        <section class="section">
+            <h2>نبذة عني</h2>
+            <p>مطور محترف لسيرفرات ماينكرافت مع خبرة في إنشاء وإدارة السيرفرات. متخصص في تطوير البلجنات المخصصة وتحسين أداء السيرفر.</p>
+        </section>
 
-    <!-- الصفحة الترحيبية -->
-    <div class="welcome-container hidden" id="welcomePage">
-        <div class="welcome-box">
-            <h2>Welcome, Soba Developer</h2>
-            <p>You have successfully logged in.</p>
-
-            <!-- رابط Discord -->
-            <div class="discord-link">
-                <p>Join my Discord server for updates and support:</p>
-                <a href="https://discord.gg/GqsHz2PVe7" target="_blank">Join Discord</a>
+        <section class="section">
+            <h2>المهارات</h2>
+            <div class="skills">
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">Spigot API</span>
+                <span class="skill-tag">Paper API</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">إدارة السيرفرات</span>
+                <span class="skill-tag">تطوير البلجنات</span>
+                <span class="skill-tag">تحسين الأداء</span>
             </div>
+        </section>
 
-            <!-- معلومات Minecraft Server -->
-            <div class="server-info">
-                <h3>Minecraft Server Developer</h3>
-                <p>I specialize in developing the following server types:</p>
-                <ul>
-                    <li><strong>Box PvP</strong></li>
-                    <li><strong>QuickBox</strong></li>
-                </ul>
+        <section class="section">
+            <h2>المشاريع</h2>
+            <div class="project">
+                <h3>نظام الاقتصاد المتقدم</h3>
+                <p>تطوير نظام اقتصادي متكامل للسيرفر مع دعم للمتاجر والمزادات</p>
             </div>
-        </div>
-    </div>
+            <div class="project">
+                <h3>نظام المهام اليومية</h3>
+                <p>تطوير نظام للمهام اليومية والأسبوعية مع نظام مكافآت متقدم</p>
+            </div>
+            <div class="project">
+                <h3>نظام الحماية المتقدم</h3>
+                <p>تطوير نظام حماية متكامل ضد الهاكرز والمخربين</p>
+            </div>
+        </section>
 
-    <script src="script.js"></script>
+        <section class="section">
+            <h2>معلومات التواصل</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>البريد الإلكتروني:</span>
+                    <span>xxnadrxxnadr@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>ديسكورد:</span>
+                    <span>_wn6</span>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
