@@ -8,20 +8,20 @@
 /* تنسيق الخلفية والصفحة */
 body {
     font-family: Arial, sans-serif;
-    background: #f5f5f5; /* خلفية بيضاء */
+    background: linear-gradient(135deg, #1e1e2f, #2a2a40); /* خلفية داكنة */
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #333;
+    color: #fff;
 }
 
 /* تنسيق الحاوية */
 .auth-container, .admin-container {
-    background: #ffffff; /* خلفية بيضاء */
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 400px;
     text-align: center;
@@ -46,7 +46,7 @@ body {
 
 h2 {
     margin-bottom: 1rem;
-    color: #333; /* لون أسود */
+    color: #fff; /* لون أبيض */
     font-size: 1.8rem;
 }
 
@@ -60,26 +60,28 @@ h2 {
 
 .input-group label {
     font-size: 0.9rem;
-    color: #555;
+    color: #ccc; /* لون رمادي فاتح */
 }
 
 .input-group input {
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #444; /* لون رمادي داكن */
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+    color: #fff; /* لون أبيض */
     transition: border-color 0.3s ease;
 }
 
 .input-group input:focus {
-    border-color: #333; /* لون أسود */
+    border-color: #7289da; /* لون Discord */
 }
 
 /* تنسيق الأزرار */
 button {
     padding: 0.75rem;
-    background: #333; /* لون أسود */
+    background: #7289da; /* لون Discord */
     color: white;
     border: none;
     border-radius: 5px;
@@ -89,23 +91,7 @@ button {
 }
 
 button:hover {
-    background: #555; /* لون رمادي داكن */
-}
-
-/* تنسيق روابط التبديل */
-.switch-form {
-    font-size: 0.9rem;
-    color: #555;
-}
-
-.switch-form a {
-    color: #333; /* لون أسود */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.switch-form a:hover {
-    text-decoration: underline;
+    background: #5a6da8; /* لون Discord داكن */
 }
 
 /* تنسيق صفحة الإدارة */
@@ -116,13 +102,13 @@ button:hover {
 }
 
 .admin-box h2 {
-    color: #333; /* لون أسود */
+    color: #fff; /* لون أبيض */
     font-size: 1.8rem;
 }
 
 .admin-box p {
     font-size: 1rem;
-    color: #555;
+    color: #ccc; /* لون رمادي فاتح */
 }
 
 .discord-link {
@@ -150,17 +136,19 @@ button:hover {
 }
 
 .domain-management h3 {
-    color: #333; /* لون أسود */
+    color: #fff; /* لون أبيض */
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
 .domain-management input {
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid #444; /* لون رمادي داكن */
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
+    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+    color: #fff; /* لون أبيض */
     width: 100%;
     margin-bottom: 0.5rem;
 }
@@ -172,7 +160,7 @@ button:hover {
 
 .domain-management ul li {
     font-size: 1rem;
-    color: #555;
+    color: #ccc; /* لون رمادي فاتح */
     margin-bottom: 0.5rem;
 }
 
