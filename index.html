@@ -1,70 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proflie Soba</title>
+    <title>تسجيل الدخول</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="auth-container">
-        <!-- تسجيل الدخول -->
-        <div id="loginForm" class="form-container">
-            <form class="auth-form">
-                <h2>Login</h2>
+    <div class="login-container">
+        <div class="login-box">
+            <h2>تسجيل الدخول</h2>
+            <form class="login-form" id="loginForm">
                 <div class="input-group">
-                    <label for="username">Username</label>
-                    <input type="text" id="username" placeholder="Enter your username" required>
+                    <label for="username">اسم المستخدم</label>
+                    <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
                 </div>
                 <div class="input-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
                 </div>
-                <button type="submit">Login</button>
-                <p class="switch-form">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
-            </form>
-        </div>
-
-        <!-- تسجيل مستخدم جديد -->
-        <div id="registerForm" class="form-container hidden">
-            <form class="auth-form">
-                <h2>Register</h2>
-                <div class="input-group">
-                    <label for="newUsername">Username</label>
-                    <input type="text" id="newUsername" placeholder="Choose a username" required>
+                <div class="remember-me">
+                    <input type="checkbox" id="remember">
+                    <label for="remember">تذكرني</label>
                 </div>
-                <div class="input-group">
-                    <label for="newPassword">Password</label>
-                    <input type="password" id="newPassword" placeholder="Choose a password" required>
-                </div>
-                <button type="submit">Register</button>
-                <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login here</a></p>
+                <button type="submit">تسجيل الدخول</button>
+                <p class="register-link">لا تملك حسابًا؟ <a href="#">سجل هنا</a></p>
             </form>
         </div>
     </div>
 
-    <!-- صفحة البروفايل -->
-    <div class="profile-container hidden" id="profilePage">
-        <div class="profile-box">
-            <div class="profile-header">
-                <img src="profile.jpg" alt="Profile Picture" class="profile-picture">
-                <h2>Soba Developer</h2>
-                <p>Minecraft Server Developer</p>
-            </div>
+    <!-- الصفحة الترحيبية -->
+    <div class="welcome-container hidden" id="welcomePage">
+        <div class="welcome-box">
+            <h2>Welcome For Soba Developer!</h2>
+            <p>You have successfully logged in.</p>
 
-            <!-- معلومات الشغال -->
-            <div class="work-info">
-                <h3>My Work</h3>
-                <ul>
-                    <li><strong>Box PvP</strong> - A fast-paced PvP experience.</li>
-                    <li><strong>QuickBox</strong> - Instant PvP matches with custom kits.</li>
-                </ul>
-            </div>
-
-            <!-- ربط Discord -->
+            <!-- رابط Discord -->
             <div class="discord-link">
-                <p>Connect with me on Discord:</p>
+                <p>Join my Discord server for updates and support:</p>
                 <a href="https://discord.gg/YourInviteLink" target="_blank">Join Discord</a>
+            </div>
+
+            <!-- معلومات Minecraft Server -->
+            <div class="server-info">
+                <h3>Minecraft Server Developer</h3>
+                <p>I specialize in developing the following server types:</p>
+                <ul>
+                    <li><strong>Box PvP</strong></li>
+                    <li><strong>QuickBox</strong></li>
+                </ul>
             </div>
         </div>
     </div>
