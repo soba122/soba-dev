@@ -21,6 +21,24 @@
                     <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
                 <button type="submit">Login</button>
+                <p class="switch-form">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+            </form>
+        </div>
+
+        <!-- تسجيل مستخدم جديد -->
+        <div id="registerForm" class="form-container hidden">
+            <form class="auth-form">
+                <h2>Register</h2>
+                <div class="input-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" id="newUsername" placeholder="Choose a username" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" placeholder="Choose a password" required>
+                </div>
+                <button type="submit">Register</button>
+                <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login here</a></p>
             </form>
         </div>
     </div>
