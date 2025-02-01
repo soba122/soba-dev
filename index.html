@@ -4,65 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soba Developer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <h1 class="title">Minecraft Developer</h1>
-        <p class="subtitle">Crafting Epic Server Experiences</p>
-    </header>
+    <nav class="navbar">
+        <div class="nav-logo">DEV</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="https://discord.gg/your-server" class="discord-btn" target="_blank">
+                Join Discord
+            </a>
+        </div>
+    </nav>
 
-    <div class="container">
-        <section class="section" id="about">
-            <h2>About Me</h2>
-            <p>Professional Minecraft server developer specializing in creating unique and immersive experiences. Expert in plugin development, server optimization, and custom gameplay mechanics.</p>
-        </section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Minecraft Developer</h1>
+            <p class="typewriter">Building Amazing Server Experiences</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="primary-btn">View Projects</a>
+                <a href="https://discord.gg/your-server" class="secondary-btn">Discord Server</a>
+            </div>
+        </div>
+        <div class="hero-cards">
+            <div class="stat-card">
+                <h3>Projects</h3>
+                <span>50+</span>
+            </div>
+            <div class="stat-card">
+                <h3>Plugins</h3>
+                <span>30+</span>
+            </div>
+            <div class="stat-card">
+                <h3>Experience</h3>
+                <span>5+ Years</span>
+            </div>
+        </div>
+    </section>
 
-        <section class="section">
-            <h2>Skills</h2>
-            <div class="skills">
-                <span class="skill-tag">Java Development</span>
-                <span class="skill-tag">Spigot API</span>
-                <span class="skill-tag">Paper API</span>
-                <span class="skill-tag">MySQL</span>
-                <span class="skill-tag">Redis Cache</span>
-                <span class="skill-tag">Server Management</span>
-                <span class="skill-tag">Plugin Development</span>
-                <span class="skill-tag">Performance Optimization</span>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Epic Projects</h2>
-            <div class="project">
-                <h3>Advanced Economy System</h3>
-                <p>Custom economy system with shops, auctions, and player markets</p>
-            </div>
-            <div class="project">
-                <h3>Quest System</h3>
-                <p>Dynamic quest system with daily and weekly challenges</p>
-            </div>
-            <div class="project">
-                <h3>Anti-Cheat System</h3>
-                <p>Advanced protection system against hackers and exploiters</p>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2>Contact</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <span>Email:</span>
-                    <span>xxnadrxxnadr@gmail.com</span>
-                </div>
-                <div class="contact-item">
-                    <span>Discord:</span>
-                    <span>_wn6</span>
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="skills-container">
+            <div class="skill">
+                <div class="skill-name">Java</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="90"></div>
                 </div>
             </div>
-        </section>
-    </div>
+            <div class="skill">
+                <div class="skill-name">Spigot API</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="85"></div>
+                </div>
+            </div>
+            <div class="skill">
+                <div class="skill-name">MySQL</div>
+                <div class="skill-bar">
+                    <div class="skill-progress" data-progress="80"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Economy System</h3>
+                    <p>Advanced economy plugin with shops & auctions</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Anti-Cheat</h3>
+                    <p>Advanced protection against cheats & exploits</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Spigot API</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Custom Minigames</h3>
+                    <p>Collection of unique minigames</p>
+                    <div class="project-tech">
+                        <span>Java</span>
+                        <span>Redis</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-cards">
+            <a href="https://discord.gg/your-server" class="contact-card discord">
+                <i class="fab fa-discord"></i>
+                <h3>Discord</h3>
+                <p>Join our community</p>
+            </a>
+            <a href="mailto:your@email.com" class="contact-card email">
+                <i class="fas fa-envelope"></i>
+                <h3>Email</h3>
+                <p>Business inquiries</p>
+            </a>
+        </div>
+    </section>
+
+    <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
