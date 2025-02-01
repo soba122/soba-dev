@@ -1,103 +1,80 @@
-// انتظر حتى يتم تحميل الصفحة بالكامل
-document.addEventListener('DOMContentLoaded', function() {
-    // إضافة تأثيرات حركية للعناصر عند التمرير
-    const sections = document.querySelectorAll('.section');
-    
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px'
-    };
+// Intersection Observer for scroll animations
+const sections = document.querySelectorAll('.section');
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'all 0.5s ease-out';
-        observer.observe(section);
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
     });
+}, { threshold: 0.1 });
 
-    // إضافة تأثير نقر للمهارات
-    const skillTags = document.querySelectorAll('.skill-tag');
-    skillTags.forEach(tag => {
-        tag.addEventListener('click', function() {
-            this.style.transform = 'scale(0.95)';
-            setTimeout(() => {
-                this.style.transform = 'scale(1)';
-            }, 200);
-        });
-    });
+sections.forEach(section => {
+    observer.observe(section);
+});
 
-    // إضافة تأثير تحريك للصورة الشخصية
-    const profileImage = document.getElementById('profileImage');
-    if (profileImage) {
-        profileImage.addEventListener('mousemove', function(e) {
-            const rect = this.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            const centerX = rect.width / 2;
-            const centerY = rect.height / 2;
-            
-            const rotateX = (y - centerY) / 10;
-            const rotateY = (centerX - x) / 10;
-            
-            this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+// Skill tag hover effects
+const skillTags = document.querySelectorAll('.skill-tag');
 
-        profileImage.addEventListener('mouseleave', function() {
-            this.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
-        });
-    }
-
-    // إضافة تأثير تمرير سلس للروابط
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // تحديث السنة في الفوتر تلقائياً
-    const yearElement = document.getElementById('currentYear');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-
-    // إضافة تأثيرات تفاعلية للمشاريع
-    const projects = document.querySelectorAll('.project');
-    projects.forEach(project => {
-        project.addEventListener('mouseenter', function() {
-            this.style.transform = 'scale(1.02)';
-        });
-
-        project.addEventListener('mouseleave', function() {
-            this.style.transform = 'scale(1)';
-        });
+skillTags.forEach(tag => {
+    tag.addEventListener('mousemove', (e) => {
+        const rect = tag.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        // Create ripple effect
+        const ripple = document.createElement('div');
+        ripple.style.left = `${x}px`;
+        ripple.style.top = `${y}px`;
+        ripple.className = 'ripple';
+        tag.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 1000);
     });
 });
 
-// دالة للتبديل بين الوضع الليلي والنهاري
-function toggleDarkMode() {
-    document.body.classList.toggle('dark-mode');
-    localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
-}
+// Smooth scroll for navigation
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+            targetElement.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
 
-// التحقق من تفضيلات الوضع الليلي المحفوظة
-if (localStorage.getItem('darkMode') === 'true') {
-    document.body.classList.add('dark-mode');
-}
+// Parallax effect for header
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    const scrolled = window.pageYOffset;
+    header.style.transform = `translateY(${scrolled * 0.5}px)`;
+});
+
+// Add glitch effect to title on hover
+const title = document.querySelector('.title');
+title.addEventListener('mouseover', () => {
+    title.classList.add('glitch');
+    setTimeout(() => {
+        title.classList.remove('glitch');
+    }, 1000);
+});
+
+// Projects hover effect
+const projects = document.querySelectorAll('.project');
+projects.forEach(project => {
+    project.addEventListener('mouseenter', () => {
+        project.style.transform = 'translateX(10px) scale(1.02)';
+    });
+    
+    project.addEventListener('mouseleave', () => {
+        project.style.transform = 'translateX(0) scale(1)';
+    });
+});
