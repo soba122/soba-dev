@@ -1,7 +1,6 @@
 // بيانات المستخدمين (محفوظة في LocalStorage)
 let users = JSON.parse(localStorage.getItem('users')) || [
-    { username: "user1", password: "pass1" },
-    { username: "user2", password: "pass2" }
+    { username: "admin", password: "admin123" }
 ];
 
 // تبديل بين تسجيل الدخول والتسجيل
@@ -25,9 +24,9 @@ document.getElementById('loginForm').querySelector('form').addEventListener('sub
     const user = users.find(u => u.username === username && u.password === password);
 
     if (user) {
-        // إخفاء صفحة تسجيل الدخول وإظهار الصفحة الترحيبية
+        // إخفاء صفحة تسجيل الدخول وإظهار صفحة الإدارة
         document.querySelector('.auth-container').classList.add('hidden');
-        document.getElementById('welcomePage').classList.remove('hidden');
+        document.getElementById('adminPage').classList.remove('hidden');
     } else {
         alert('Invalid username or password!');
     }
@@ -49,3 +48,15 @@ document.getElementById('registerForm').querySelector('form').addEventListener('
         document.getElementById('loginForm').classList.remove('hidden');
     }
 });
+
+// إضافة دومين
+function addDomain() {
+    const domainInput = document.getElementById('domainInput').value;
+    if (domainInput) {
+        const domainList = document.getElementById('domainList');
+        const li = document.createElement('li');
+        li.textContent = domainInput;
+        domainList.appendChild(li);
+        document.getElementById('domainInput').value = '';
+    }
+}
