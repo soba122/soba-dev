@@ -3,124 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
-        body {
-            background-color: #f0f2f5;
-            color: #333;
-        }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        .header {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-            border-radius: 15px;
-            margin-bottom: 30px;
-        }
-
-        .profile-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin-bottom: 20px;
-            border: 5px solid white;
-        }
-
-        .section {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-
-        h2 {
-            color: #2E7D32;
-            margin-bottom: 15px;
-            font-size: 1.8em;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill-tag {
-            background: #E8F5E9;
-            color: #2E7D32;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9em;
-        }
-
-        .project {
-            border-bottom: 1px solid #eee;
-            padding: 15px 0;
-        }
-
-        .project:last-child {
-            border-bottom: none;
-        }
-
-        .contact-info {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            .header {
-                padding: 40px 10px;
-            }
-        }
-    </style>
+    <title>ملف شخصي - مطور سيرفرات ماينكرافت</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <img src="/api/placeholder/150/150" alt="الصورة الشخصية" class="profile-img">
+            <img src="/api/placeholder/150/150" alt="الصورة الشخصية" class="profile-img" id="profileImage">
             <h1>مطور سيرفرات ماينكرافت</h1>
             <p>متخصص في تطوير وإدارة سيرفرات ماينكرافت</p>
         </header>
 
-        <section class="section">
+        <section class="section" id="about">
             <h2>نبذة عني</h2>
             <p>مطور محترف لسيرفرات ماينكرافت مع خبرة في إنشاء وإدارة السيرفرات. متخصص في تطوير البلجنات المخصصة وتحسين أداء السيرفر.</p>
         </section>
 
         <section class="section">
             <h2>المهارات</h2>
-            <div class="skills">
+            <div class="skills" id="skillsContainer">
                 <span class="skill-tag">Java</span>
                 <span class="skill-tag">Spigot API</span>
                 <span class="skill-tag">Paper API</span>
@@ -134,33 +35,36 @@
 
         <section class="section">
             <h2>المشاريع</h2>
-            <div class="project">
-                <h3>نظام الاقتصاد المتقدم</h3>
-                <p>تطوير نظام اقتصادي متكامل للسيرفر مع دعم للمتاجر والمزادات</p>
-            </div>
-            <div class="project">
-                <h3>نظام المهام اليومية</h3>
-                <p>تطوير نظام للمهام اليومية والأسبوعية مع نظام مكافآت متقدم</p>
-            </div>
-            <div class="project">
-                <h3>نظام الحماية المتقدم</h3>
-                <p>تطوير نظام حماية متكامل ضد الهاكرز والمخربين</p>
+            <div id="projectsContainer">
+                <div class="project">
+                    <h3>نظام الاقتصاد المتقدم</h3>
+                    <p>تطوير نظام اقتصادي متكامل للسيرفر مع دعم للمتاجر والمزادات</p>
+                </div>
+                <div class="project">
+                    <h3>نظام المهام اليومية</h3>
+                    <p>تطوير نظام للمهام اليومية والأسبوعية مع نظام مكافآت متقدم</p>
+                </div>
+                <div class="project">
+                    <h3>نظام الحماية المتقدم</h3>
+                    <p>تطوير نظام حماية متكامل ضد الهاكرز والمخربين</p>
+                </div>
             </div>
         </section>
 
         <section class="section">
             <h2>معلومات التواصل</h2>
-            <div class="contact-info">
+            <div class="contact-info" id="contactInfo">
                 <div class="contact-item">
                     <span>البريد الإلكتروني:</span>
-                    <span>xxnadrxxnadr@gmail.com</span>
+                    <span>example@email.com</span>
                 </div>
                 <div class="contact-item">
                     <span>ديسكورد:</span>
-                    <span>_wn6</span>
+                    <span>username#0000</span>
                 </div>
             </div>
         </section>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
