@@ -8,22 +8,22 @@
 /* تنسيق الخلفية والصفحة */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #2a2a40); /* خلفية داكنة */
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    color: #fff;
+    color: #333;
 }
 
 /* تنسيق الحاوية */
-.auth-container, .profile-container {
-    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
+.login-container, .welcome-container {
+    background: rgba(255, 255, 255, 0.95);
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -33,21 +33,17 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* تنسيق النماذج */
-.form-container {
+/* تنسيق صندوق تسجيل الدخول */
+.login-box {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.form-container.hidden {
-    display: none;
-}
-
-h2 {
-    margin-bottom: 1rem;
-    color: #fff; /* لون أبيض */
+.login-box h2 {
+    color: #6a11cb;
     font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
 /* تنسيق حقول الإدخال */
@@ -55,33 +51,45 @@ h2 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    text-align: left;
+    text-align: right;
 }
 
 .input-group label {
     font-size: 0.9rem;
-    color: #ccc; /* لون رمادي فاتح */
+    color: #555;
 }
 
 .input-group input {
     padding: 0.75rem;
-    border: 1px solid #444; /* لون رمادي داكن */
+    border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1rem;
     outline: none;
-    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
-    color: #fff; /* لون أبيض */
     transition: border-color 0.3s ease;
 }
 
 .input-group input:focus {
-    border-color: #7289da; /* لون Discord */
+    border-color: #6a11cb;
 }
 
-/* تنسيق الأزرار */
+/* تنسيق خيار "تذكرني" */
+.remember-me {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.remember-me input {
+    width: 1rem;
+    height: 1rem;
+}
+
+/* تنسيق زر تسجيل الدخول */
 button {
     padding: 0.75rem;
-    background: #7289da; /* لون Discord */
+    background: #6a11cb;
     color: white;
     border: none;
     border-radius: 5px;
@@ -91,74 +99,40 @@ button {
 }
 
 button:hover {
-    background: #5a6da8; /* لون Discord داكن */
+    background: #2575fc;
 }
 
-/* تنسيق روابط التبديل */
-.switch-form {
+/* تنسيق رابط التسجيل */
+.register-link {
     font-size: 0.9rem;
-    color: #ccc; /* لون رمادي فاتح */
+    color: #555;
 }
 
-.switch-form a {
-    color: #7289da; /* لون Discord */
+.register-link a {
+    color: #6a11cb;
     text-decoration: none;
     font-weight: bold;
 }
 
-.switch-form a:hover {
+.register-link a:hover {
     text-decoration: underline;
 }
 
-/* تنسيق صفحة البروفايل */
-.profile-box {
+/* تنسيق الصفحة الترحيبية */
+.welcome-box {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.profile-header {
-    text-align: center;
-}
-
-.profile-picture {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    border: 3px solid #7289da; /* لون Discord */
-    margin-bottom: 1rem;
-}
-
-.profile-header h2 {
-    color: #fff; /* لون أبيض */
+.welcome-box h2 {
+    color: #6a11cb;
     font-size: 1.8rem;
 }
 
-.profile-header p {
+.welcome-box p {
     font-size: 1rem;
-    color: #ccc; /* لون رمادي فاتح */
-}
-
-.work-info {
-    margin-top: 1rem;
-    text-align: left;
-}
-
-.work-info h3 {
-    color: #fff; /* لون أبيض */
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.work-info ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.work-info ul li {
-    font-size: 1rem;
-    color: #ccc; /* لون رمادي فاتح */
-    margin-bottom: 0.5rem;
+    color: #555;
 }
 
 .discord-link {
@@ -168,7 +142,7 @@ button:hover {
 .discord-link a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: #7289da; /* لون Discord */
+    background: #7289da;
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -177,7 +151,29 @@ button:hover {
 }
 
 .discord-link a:hover {
-    background: #5a6da8; /* لون Discord داكن */
+    background: #5a6da8;
+}
+
+.server-info {
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.server-info h3 {
+    color: #6a11cb;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.server-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.server-info ul li {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
 }
 
 .hidden {
