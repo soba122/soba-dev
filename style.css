@@ -127,25 +127,14 @@ button:hover {
     color: #ccc; /* لون رمادي فاتح */
 }
 
-.orders-management, .add-domain, .domains-list, .buy-domain {
+.add-domain, .ddns-counter, .orders-management, .domains-list, .buy-domain {
     margin-top: 1rem;
     text-align: left;
 }
 
-.orders-management h3, .add-domain h3, .domains-list h3, .buy-domain h3 {
+.add-domain h3, .ddns-counter h3, .orders-management h3, .domains-list h3, .buy-domain h3 {
     color: #fff; /* لون أبيض */
     font-size: 1.2rem;
-    margin-bottom: 0.5rem;
-}
-
-.orders-management ul, .domains-list ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.orders-management ul li, .domains-list ul li {
-    font-size: 1rem;
-    color: #ccc; /* لون رمادي فاتح */
     margin-bottom: 0.5rem;
 }
 
@@ -158,6 +147,36 @@ button:hover {
     background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
     color: #fff; /* لون أبيض */
     width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.ddns-counter .ddns-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #444; /* لون رمادي داكن */
+}
+
+.ddns-counter .ddns-item:last-child {
+    border-bottom: none;
+}
+
+.ddns-counter .ddns-name {
+    font-weight: bold;
+}
+
+.ddns-counter .ddns-credit {
+    color: #7289da; /* لون Discord */
+}
+
+.orders-management ul, .domains-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.orders-management ul li, .domains-list ul li {
+    font-size: 1rem;
+    color: #ccc; /* لون رمادي فاتح */
     margin-bottom: 0.5rem;
 }
 
