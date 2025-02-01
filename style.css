@@ -17,13 +17,13 @@ body {
 }
 
 /* تنسيق الحاوية */
-.auth-container, .admin-container {
+.auth-container, .admin-container, .user-container {
     background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     text-align: center;
     animation: fadeIn 0.5s ease-in-out;
 }
@@ -111,53 +111,45 @@ button:hover {
 }
 
 /* تنسيق صفحة الإدارة */
-.admin-box {
+.admin-box, .user-box {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.admin-box h2 {
+.admin-box h2, .user-box h2 {
     color: #fff; /* لون أبيض */
     font-size: 1.8rem;
 }
 
-.admin-box p {
+.admin-box p, .user-box p {
     font-size: 1rem;
     color: #ccc; /* لون رمادي فاتح */
 }
 
-.discord-link {
-    margin-top: 1rem;
-}
-
-.discord-link a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: #7289da; /* لون Discord */
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.discord-link a:hover {
-    background: #5a6da8; /* لون Discord داكن */
-}
-
-.domain-management {
+.orders-management, .add-domain, .domains-list, .buy-domain {
     margin-top: 1rem;
     text-align: left;
 }
 
-.domain-management h3 {
+.orders-management h3, .add-domain h3, .domains-list h3, .buy-domain h3 {
     color: #fff; /* لون أبيض */
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.domain-management input {
+.orders-management ul, .domains-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.orders-management ul li, .domains-list ul li {
+    font-size: 1rem;
+    color: #ccc; /* لون رمادي فاتح */
+    margin-bottom: 0.5rem;
+}
+
+.add-domain input, .buy-domain input {
     padding: 0.75rem;
     border: 1px solid #444; /* لون رمادي داكن */
     border-radius: 5px;
@@ -166,17 +158,6 @@ button:hover {
     background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
     color: #fff; /* لون أبيض */
     width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-.domain-management ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.domain-management ul li {
-    font-size: 1rem;
-    color: #ccc; /* لون رمادي فاتح */
     margin-bottom: 0.5rem;
 }
 
