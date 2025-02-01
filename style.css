@@ -8,7 +8,7 @@
 /* تنسيق الخلفية والصفحة */
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: #f5f5f5; /* خلفية بيضاء */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +17,11 @@ body {
 }
 
 /* تنسيق الحاوية */
-.login-container, .welcome-container {
-    background: rgba(255, 255, 255, 0.95);
+.auth-container, .welcome-container {
+    background: #ffffff; /* خلفية بيضاء */
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
     text-align: center;
@@ -33,17 +33,21 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* تنسيق صندوق تسجيل الدخول */
-.login-box {
+/* تنسيق النماذج */
+.form-container {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.login-box h2 {
-    color: #6a11cb;
-    font-size: 1.8rem;
+.form-container.hidden {
+    display: none;
+}
+
+h2 {
     margin-bottom: 1rem;
+    color: #333; /* لون أسود */
+    font-size: 1.8rem;
 }
 
 /* تنسيق حقول الإدخال */
@@ -51,7 +55,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    text-align: right;
+    text-align: left;
 }
 
 .input-group label {
@@ -69,7 +73,7 @@ body {
 }
 
 .input-group input:focus {
-    border-color: #6a11cb;
+    border-color: #333; /* لون أسود */
 }
 
 /* تنسيق خيار "تذكرني" */
@@ -86,10 +90,10 @@ body {
     height: 1rem;
 }
 
-/* تنسيق زر تسجيل الدخول */
+/* تنسيق الأزرار */
 button {
     padding: 0.75rem;
-    background: #6a11cb;
+    background: #333; /* لون أسود */
     color: white;
     border: none;
     border-radius: 5px;
@@ -99,22 +103,22 @@ button {
 }
 
 button:hover {
-    background: #2575fc;
+    background: #555; /* لون رمادي داكن */
 }
 
-/* تنسيق رابط التسجيل */
-.register-link {
+/* تنسيق روابط التبديل */
+.switch-form {
     font-size: 0.9rem;
     color: #555;
 }
 
-.register-link a {
-    color: #6a11cb;
+.switch-form a {
+    color: #333; /* لون أسود */
     text-decoration: none;
     font-weight: bold;
 }
 
-.register-link a:hover {
+.switch-form a:hover {
     text-decoration: underline;
 }
 
@@ -126,7 +130,7 @@ button:hover {
 }
 
 .welcome-box h2 {
-    color: #6a11cb;
+    color: #333; /* لون أسود */
     font-size: 1.8rem;
 }
 
@@ -142,7 +146,7 @@ button:hover {
 .discord-link a {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: #7289da;
+    background: #333; /* لون أسود */
     color: white;
     border-radius: 5px;
     text-decoration: none;
@@ -151,7 +155,7 @@ button:hover {
 }
 
 .discord-link a:hover {
-    background: #5a6da8;
+    background: #555; /* لون رمادي داكن */
 }
 
 .server-info {
@@ -160,7 +164,7 @@ button:hover {
 }
 
 .server-info h3 {
-    color: #6a11cb;
+    color: #333; /* لون أسود */
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
