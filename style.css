@@ -17,7 +17,7 @@ body {
 }
 
 /* تنسيق الحاوية */
-.auth-container, .admin-container, .user-container {
+.auth-container, .profile-container {
     background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
     padding: 2rem;
     border-radius: 10px;
@@ -110,74 +110,74 @@ button:hover {
     text-decoration: underline;
 }
 
-/* تنسيق صفحة الإدارة */
-.admin-box, .user-box {
+/* تنسيق صفحة البروفايل */
+.profile-box {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
 }
 
-.admin-box h2, .user-box h2 {
+.profile-header {
+    text-align: center;
+}
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #7289da; /* لون Discord */
+    margin-bottom: 1rem;
+}
+
+.profile-header h2 {
     color: #fff; /* لون أبيض */
     font-size: 1.8rem;
 }
 
-.admin-box p, .user-box p {
+.profile-header p {
     font-size: 1rem;
     color: #ccc; /* لون رمادي فاتح */
 }
 
-.add-domain, .ddns-counter, .orders-management, .domains-list, .buy-domain {
+.work-info {
     margin-top: 1rem;
     text-align: left;
 }
 
-.add-domain h3, .ddns-counter h3, .orders-management h3, .domains-list h3, .buy-domain h3 {
+.work-info h3 {
     color: #fff; /* لون أبيض */
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
 }
 
-.add-domain input, .buy-domain input {
-    padding: 0.75rem;
-    border: 1px solid #444; /* لون رمادي داكن */
-    border-radius: 5px;
-    font-size: 1rem;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1); /* خلفية شفافة */
-    color: #fff; /* لون أبيض */
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-.ddns-counter .ddns-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #444; /* لون رمادي داكن */
-}
-
-.ddns-counter .ddns-item:last-child {
-    border-bottom: none;
-}
-
-.ddns-counter .ddns-name {
-    font-weight: bold;
-}
-
-.ddns-counter .ddns-credit {
-    color: #7289da; /* لون Discord */
-}
-
-.orders-management ul, .domains-list ul {
+.work-info ul {
     list-style-type: none;
     padding: 0;
 }
 
-.orders-management ul li, .domains-list ul li {
+.work-info ul li {
     font-size: 1rem;
     color: #ccc; /* لون رمادي فاتح */
     margin-bottom: 0.5rem;
+}
+
+.discord-link {
+    margin-top: 1rem;
+}
+
+.discord-link a {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #7289da; /* لون Discord */
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.discord-link a:hover {
+    background: #5a6da8; /* لون Discord داكن */
 }
 
 .hidden {
