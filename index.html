@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soba Developer Web</title>
+    <title>Soba Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,10 +19,6 @@
                 <div class="input-group">
                     <label for="password">Password</label>
                     <input type="password" id="password" placeholder="Enter your password" required>
-                </div>
-                <div class="remember-me">
-                    <input type="checkbox" id="remember">
-                    <label for="remember">Remember me</label>
                 </div>
                 <button type="submit">Login</button>
                 <p class="switch-form">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
@@ -47,26 +43,24 @@
         </div>
     </div>
 
-    <!-- الصفحة الترحيبية -->
-    <div class="welcome-container hidden" id="welcomePage">
-        <div class="welcome-box">
-            <h2>Welcome, Soba Developer!</h2>
-            <p>You have successfully logged in.</p>
+    <!-- صفحة الإدارة -->
+    <div class="admin-container hidden" id="adminPage">
+        <div class="admin-box">
+            <h2>Admin Panel</h2>
+            <p>Welcome, Admin!</p>
 
-            <!-- رابط Discord -->
+            <!-- ربط Discord -->
             <div class="discord-link">
-                <p>Join my Discord server for updates and support:</p>
-                <a href="https://discord.gg/YourInviteLink" target="_blank">Join Discord</a>
+                <p>Connect your Discord account:</p>
+                <a href="https://discord.com/api/oauth2/authorize?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code&scope=identify" target="_blank">Connect Discord</a>
             </div>
 
-            <!-- معلومات Minecraft Server -->
-            <div class="server-info">
-                <h3>Minecraft Server Developer</h3>
-                <p>I specialize in developing the following server types:</p>
-                <ul>
-                    <li><strong>Box PvP</strong></li>
-                    <li><strong>QuickBox</strong></li>
-                </ul>
+            <!-- إدارة الدومين -->
+            <div class="domain-management">
+                <h3>Domain Management</h3>
+                <input type="text" id="domainInput" placeholder="Enter domain name">
+                <button onclick="addDomain()">Add Domain</button>
+                <ul id="domainList"></ul>
             </div>
         </div>
     </div>
