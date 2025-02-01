@@ -1,30 +1,48 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تسجيل الدخول</title>
+    <title>Soba</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="login-container">
-        <div class="login-box">
-            <h2>تسجيل الدخول</h2>
-            <form class="login-form" id="loginForm">
+    <div class="auth-container">
+        <!-- تسجيل الدخول -->
+        <div id="loginForm" class="form-container">
+            <form class="auth-form">
+                <h2>Login</h2>
                 <div class="input-group">
-                    <label for="username">اسم المستخدم</label>
-                    <input type="text" id="username" placeholder="أدخل اسم المستخدم" required>
+                    <label for="username">Username</label>
+                    <input type="text" id="username" placeholder="Enter your username" required>
                 </div>
                 <div class="input-group">
-                    <label for="password">كلمة المرور</label>
-                    <input type="password" id="password" placeholder="أدخل كلمة المرور" required>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password" required>
                 </div>
                 <div class="remember-me">
                     <input type="checkbox" id="remember">
-                    <label for="remember">تذكرني</label>
+                    <label for="remember">Remember me</label>
                 </div>
-                <button type="submit">تسجيل الدخول</button>
-                <p class="register-link">لا تملك حسابًا؟ <a href="#">سجل هنا</a></p>
+                <button type="submit">Login</button>
+                <p class="switch-form">Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+            </form>
+        </div>
+
+        <!-- تسجيل مستخدم جديد -->
+        <div id="registerForm" class="form-container hidden">
+            <form class="auth-form">
+                <h2>Register</h2>
+                <div class="input-group">
+                    <label for="newUsername">Username</label>
+                    <input type="text" id="newUsername" placeholder="Choose a username" required>
+                </div>
+                <div class="input-group">
+                    <label for="newPassword">Password</label>
+                    <input type="password" id="newPassword" placeholder="Choose a password" required>
+                </div>
+                <button type="submit">Register</button>
+                <p class="switch-form">Already have an account? <a href="#" id="showLogin">Login here</a></p>
             </form>
         </div>
     </div>
@@ -32,7 +50,7 @@
     <!-- الصفحة الترحيبية -->
     <div class="welcome-container hidden" id="welcomePage">
         <div class="welcome-box">
-            <h2>Welcome For Soba Developer!</h2>
+            <h2>Welcome, Soba Developer!</h2>
             <p>You have successfully logged in.</p>
 
             <!-- رابط Discord -->
