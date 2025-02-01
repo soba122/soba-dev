@@ -94,6 +94,22 @@ button:hover {
     background: #5a6da8; /* لون Discord داكن */
 }
 
+/* تنسيق روابط التبديل */
+.switch-form {
+    font-size: 0.9rem;
+    color: #ccc; /* لون رمادي فاتح */
+}
+
+.switch-form a {
+    color: #7289da; /* لون Discord */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.switch-form a:hover {
+    text-decoration: underline;
+}
+
 /* تنسيق صفحة الإدارة */
 .admin-box {
     display: flex;
