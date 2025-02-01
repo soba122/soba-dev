@@ -1,6 +1,6 @@
 // بيانات المستخدمين (محفوظة في LocalStorage)
 let users = JSON.parse(localStorage.getItem('users')) || [
-    { username: "admin", password: "admin123" }
+    { username: "admin", password: "sobaishereadmin" }
 ];
 
 // تبديل بين تسجيل الدخول والتسجيل
